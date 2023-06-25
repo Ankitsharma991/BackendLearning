@@ -1,0 +1,23 @@
+[
+  {
+    "id": "123245",
+    "title": "A Book",
+    "imageUrl": "https://clipart-library.com/images/6Tpo6G8TE.jpg",
+    "description": "This is an awesome book!",
+    "price": "19"
+  },
+  {
+    "id": "0.41607315815753076",
+    "title": "Photography Lens",
+    "imageUrl": "https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg?cs=srgb&dl=pexels-pixabay-279906.jpg&fm=jpg",
+    "description": "This is an awesome Photography Lens!!",
+    "price": "12"
+  },
+  {
+    "id": "12325",
+    "title": "Watches",
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+    "description": "This is an awesome Watch!",
+    "price": "19"
+  }
+]
