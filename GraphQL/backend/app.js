@@ -9,6 +9,7 @@ const { graphqlHTTP } = require("express-graphql"); // Corrected import
 
 const { graphqlSchema } = require("./graphql/schema");
 const { graphqlResolver } = require("./graphql/resolvers");
+const { auth } = require("./middleware/auth");
 
 const feedRoutes = require("./routes/feed");
 const authRoutes = require("./routes/auth");
@@ -55,6 +56,8 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+app.use(auth);
 
 app.use(
   "/graphql",

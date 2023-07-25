@@ -21,6 +21,16 @@ module.exports = buildSchema(`
         posts: [Post!]!
     }
 
+    type AuthData {
+        token: String!
+        userId: String!
+    }
+
+    type PostData {
+        posts: [Post!]!
+        totalPosts: It!
+    }
+
     input UserInputData {
         email: String!
         name: String!
@@ -28,7 +38,8 @@ module.exports = buildSchema(`
     }
 
     type RootQuery{
-        hello: String!
+        login(email: String!, password: String!): AuthData!
+        posts: PostData!
     }
 
     type RootMutation {
@@ -38,5 +49,6 @@ module.exports = buildSchema(`
     schema{
         query: RootQuery
         query: RootMutation
-    }
+    },
+    
 `);
