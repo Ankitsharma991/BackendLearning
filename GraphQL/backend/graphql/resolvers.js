@@ -114,8 +114,19 @@ module.exports = {
       error.code = 401;
       throw error;
     }
+    if (!page) {
+      page = 1;
+    }
+    const perPage = 2;
+
     const totalPosts = await post.find().countDocuments();
-    const posts = await post.find().sort({ createdAt: -1 }).populate("creator");
+    const posts = await post
+      .find()
+      .sort({ createdAt: -1 })
+      .populate("creator")
+      .skip((page - 1) * perPage)
+      .limit()
+      .populate("creator");
     return {
       posts: posts.map((p) => {
         return {
